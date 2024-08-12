@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Hotel Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <meta name="description" content="Hotel Demo" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon.png" />
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/style.css?v=0.0.18" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Nunito:ital,wght@0,200;0,300;1,200;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header>
+            <!-- Hero Action -->
+            <div class="header-action">
+                <div class="cta-header request hidden">
+                    <a href="#"> Richiedi </a>
+                </div>
+                <div class="cta-header booking hidden">
+                    <a href="#"> Prenota </a>
+                </div>
+                <div class="menu-burger hidden">
+                    <button type="button" class="burger-btn collapsed">
+                        <span class="burger-bar"></span>
+                    </button>
+                </div>
+                <div class="mobi">
+                    <ul>
+                        <li>
+                            <a href="https://wa.me/" target="_blank">
+                                <i class="icon-whatsapp" aria-hidden="true"></i>
+                                <div class="icon-label">Whatsapp</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+390544991516">
+                                <i class="icon-phone-2" aria-hidden="true"></i>
+                                <div class="icon-label">Chiama</div>
+                            </a>
+                        </li>
+                        <li class="request">
+                            <a href="https://www.alexandermilanomarittima.it/richiedi-preventivo/">
+                                <i class="icon-calendar" aria-hidden="true"></i>
+                                <div class="icon-label">Richiedi</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hero Menu -->
+            <div id="hero-menu">
+                <div class="inner">
+                    <div class="menu-lines-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" data-name="menu-lines-svg" x="0"
+                            y="0" version="1.1" viewBox="0 0 496.9 944.9">
+                            <path
+                                d="M-563.1 1728c51.9-149 132.2-286.5 227.4-411.8 100.3-132.1 217.4-250.4 339.5-362.4 62.3-57.3 126.2-113 190.3-168.3 60.2-52 121.2-103.6 173.7-163.5 50.5-57.8 92.6-123.6 114.3-197.8 21.8-74.4 18.7-150-9.5-222.1-28.7-73.5-72.2-140-94-216.5-28.6-99.2-29.2-204.4-1.8-304 1.5-5.6-7.2-8-8.7-2.4-20.9 76.8-25.7 157-14 235.7 5.9 40.4 16.3 80 30.8 118.1 13.8 36 31.6 70.2 48.6 104.7 17.6 35.5 34.6 71.7 44.7 110.2 9.8 37.8 12.3 77 7.3 115.7-9.7 79-46.3 152.6-94.2 215.3-49 64.3-109.6 118.7-170.4 171.4-62.9 54.8-126.2 109.2-188.2 165-123.7 111.5-243.2 228.6-347.2 359-96.3 120.8-179.4 253-236.9 396.7-7.2 18-14 36.2-20.4 54.6-1.9 5.5 6.7 7.8 8.7 2.4z" />
+                            <path
+                                d="M-796.6 1839.1c73.5-158.7 208.8-277 350.6-374.2 156.5-107.3 326.4-195.9 469-322.5C148 1031.5 252.3 896 322.8 744.3c35.2-75.8 61.9-155.5 78.3-237.4 19.8-99.1 24.8-200.2 32.2-300.7 14.8-201 52.2-399 116.4-590.2 7.8-23.3 16-46.5 24.6-69.5 2-5.4-6.7-7.8-8.7-2.4-69.1 186.3-114.2 380.7-134.2 578.4-10.2 101.4-13 203.5-26.3 304.5-11.7 88.7-33.5 175.5-66.8 258.7C275.5 842.8 176 984.3 54.2 1101.3c-136.4 131.1-302.3 222.3-459.4 325.4-142.5 93.6-282.6 202.7-370.1 352.1a641.73 641.73 0 0 0-29.1 55.8c-2.4 5.2 5.3 9.8 7.8 4.5z" />
+                            <path
+                                d="M-913.1 1817.2c82.2-174.8 275.6-245.1 441.4-315 91.6-38.6 181.2-81.4 268.8-128.5 87.3-47 174.3-96.8 254.6-155.2 76.8-55.9 142.2-122.1 199-198.1s110.2-156.6 155.2-240.1c43.2-80.2 77-167 83.5-258.6 6.8-95.7-17.3-190-48.3-279.8-31.5-91-70.9-179.3-95.7-272.4-23.9-89.5-36.4-185.8-12.6-276.6 5.8-22.3 13.9-43.9 24.1-64.6 2.5-5.2-5.2-9.8-7.8-4.5-83.9 171.2-12.7 364.7 50.1 530 34.6 91 69.6 183.9 79.6 281.4 10 97.3-10.9 191.9-50.9 280.5-38.6 85.6-90.8 164.9-143.7 242.1-55.4 80.8-116.6 156.6-192.8 218.8-76.5 62.4-162.3 113.3-248.2 161.5-87.6 49.2-177.4 94.1-269.4 134.7-165 72.8-355.8 130.1-463.7 285.8-11.8 17.1-22.2 35.2-31.1 54-2.4 5.2 5.4 9.8 7.9 4.6z" />
+                        </svg>
+                    </div>
+                    <div class="menu-bottom">
+                        <ul class="site-contacts">
+                            <li>Whatsapp:
+                                <a href="tel:12345678910" class="tel">12345678910</a>
+                                Tel: <a href="tel:+390541961735" class="tel">+39 0541 961735</a>
+                            </li>
+                            <br>
+                            <li>Email: <a href="mailto:info@test.com">booking@demoHotel.it</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-content">
+                        <nav>
+                            <ul class="menu">
+                                <li class="menu-item">
+                                    <a href="#">Hotel</a>
+                                    <ul class="sub-menu open">
+                                        <li class="menu-item"><a href="#">sottocategoria</a></li>
+                                        <li class="menu-item"><a href="#">sottocategoria</a></li>
+                                        <li class="menu-item"><a href="#">sottocategoria</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Dove siamo</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Lorem Ipsum</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Lorem Ipsum</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="menu-flower-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" data-name="menu-flower-svg"
+                            viewBox="0 0 870.6 944.9">
+                            <path
+                                d="M435.4 624c-26.9.4-53.8 3.2-79.5 11.4-13.4 4.3-26.2 10.1-39.3 15-13.8 5.1-27.8 9.6-41.8 13.9-27.4 8.4-55.1 15.9-82.5 24.4-11.8 3.7-23.8 7.1-35 12.3-9.7 4.6-18.9 10.1-27.7 16.4-18 12.6-34.7 27.2-52.6 39.8-17.4 12.2-37 23.9-58.3 27.3-2.5.4-1.3 3.2-.2 4.3 3.4 3.4 7.1 6.6 11 9.4 17.1 12.3 37.9 19 58.1 23.8 21 5 42.5 7.9 63.8 11.2 27 4.2 53.9 8.3 81.2 10.5 29.6 2.4 59.3 3.3 89 2.9 29.5-.5 58.9-3.4 87.9-8.8 6.4-1.2 12.8-2.4 19.2-3.7-9.1 15.1-12.8 31.4-14.6 48.9-1.8 17.5-2.4 35.7-10.8 51.5-2.3 4.3 4.1 10 8.1 7.4 18.5-11.7 37.7-22.6 57.1-32.8 18.2-9.5 36.3-18.9 53.7-29.6 30.5-18.7 58.8-40.4 86.3-63.2 13.6-11.3 27.1-22.9 40.4-34.5 12.2-10.6 24.1-21.7 37.1-31.3 25-18.4 53.1-32 83-40.3 16.6-4.6 33.8-6.9 51.1-6.7.6.3 1.1.6 1.7.8 6 2.6 12.5 3.3 18.9 4.5 9.9 4.5 19.9 8.7 29.9 12.7v-15.2c-11.1-5.2-22.5-10.7-29.5-13.8-33-23.8-58.8-62.4-63.5-102.8-1.6-13.4-.7-27.2.1-40.7.8-14.6 1.8-29.2 2.5-43.8 1.3-27.5-.8-55.2-4.5-82.5-3.5-26.1-9.5-51.9-19.1-76.4-10.1-25.7-24.5-49.8-38.2-73.8-14.5-25.4-29.5-50.6-44.4-75.8-7.4-12.6-15-25.1-21.9-38-6.6-12.2-12.7-24.7-19.1-37.1-10.6-20.7-22.6-40.6-34-60.9-8.2-14.7-18.4-34-35.1-40.6-.6-.2-1.2.1-1.4.7v.1c-2 6.6-3.5 13.4-4.6 20.3-2.2 13.8-3.5 27.7-7.5 41.1-3.9 12.8-8.7 25.1-11.2 38.3-4.9 25.5-3.8 51.7.4 77.2 8.7 52.4 31.1 100.8 55 147.7 8.9 17.5 17.7 35.2 24.5 53.6 1.3 22.9 7.3 45.8 13 67.8 11.4 43.9 28 87 55.8 123.3 18.5 24 39.9 45.7 63.6 64.6l5.7 5.4c7.5 6.9 15.7 13.1 24.4 18.5l-6.5-1.6c-2.3-.8-4.7-1.6-7-2.4-23.5-8.3-44.8-20.8-64.5-36-20.1-15.5-38.6-32.9-55.4-51.9-16.2-18.4-30.3-38.4-45.3-57.7-14.2-18.4-29-36.4-45.2-53.1-.5-.5-1-1-1.5-1.4-2.5-3.9-5.1-7.8-7.5-11.7-7.9-12.7-14.6-26.1-21.8-39.2-7-12.7-14.4-25.3-23.6-36.6-9.9-12.1-21.8-22.2-34.3-31.6-12.8-9.6-26.1-18.3-38.9-27.8-13.3-10-26-20.9-37.8-32.6-23.8-23.2-45.7-48.5-70.1-71.1-47.4-43.7-104.5-73.4-158.8-107.1-14.7-9.1-29.1-18.6-43.4-28.3-14.2-9.4-28.7-18.6-42.3-28.8C53 41.3 32.2 17.9 6.4.9c-.9-.7-2.3-.6-3 .4-.2.1-.3.4-.4.6C.1 8.8.1 16.5.8 23.9c.8 8.3 2.5 16.4 3.7 24.6C6 57.9 5.8 67.5 5.6 77c-.3 21.2-.6 42.1 2.7 63.1 3.3 20.9 8.9 41.2 14.8 61.5 5.2 17.8 11 35.3 18.4 52.3 29.7 67.5 78.5 124 129.8 176.1 26.3 26.7 54.2 51.1 85 72.4 30.9 21.2 63.7 39.6 97.8 55.1 17.1 7.8 34.5 14.6 51.7 22.2 18.8 8.3 37.5 17 57.1 23.4 18.9 6.1 37.9 8.1 57.6 9.4 9.8.5 19.5 1.6 29.1 3.3 10.1 2 19.5 5.7 29 9.7 3.7 1.6 7.3 3.2 11 4.8L435.4 624zm379.3 48.9c-5.3-4.7-10.6-9.5-15.6-14.5-17.3-17.3-31.2-38.1-37-62.2-5.4-22.2-5.9-45.3-12.8-67.3-6.7-21.4-19-40.6-31.3-59.1-13.5-20.3-24.9-41.5-37.6-62.2s-28.7-39.6-40.1-61.2c-10-18.9-17.1-38.8-30.1-55.9-3.3-4.4-7.2 1.6-6.2 5.1 3.9 15.2 9 30.1 12.4 45.5 3.3 15.1 2.6 29.6 2.3 44.8-8.2-19.8-18.3-38.8-28-57.9-23.5-46.1-43.6-95.9-49.4-147.7-2.9-26.4-2-53.2 5.5-78.7 1.9-6.5 4.4-12.8 6.2-19.2 1.8-6.5 3.2-13.2 4.2-19.9 2.1-12.9 3.7-25.9 7.5-38.4 3.6 1.7 6.9 4 9.8 6.8C588.8 44.6 597.1 64 606.7 81c6 10.7 12.5 21.1 18.2 31.9 6.6 12.5 12.8 25.2 19.3 37.7 13.3 25.7 28.6 50.5 43.3 75.4 14.8 25.2 29.6 50.4 43.6 76 6.8 12.5 13.7 24.9 19.3 38 5.4 12.7 9.8 25.7 13.3 39 6.6 25.9 10.5 52.5 11.7 79.2 1.4 28.8-.7 57.6-1.6 86.4-.7 24-1 48.2 6.9 71.1 7.4 21.2 19 40.7 34 57.2zm-281.1-41.5c28.2 2.2 55.9 7.7 83.4 14.2 5.8 1.4 11.7 2.8 17.5 4.3 16.6 7.3 33.3 14.6 50.1 21.5 14.1 5.8 28.5 11.4 43.4 14.9 3.2.8 6.4 1.5 9.8 2-7.8.8-15.6 1.7-23.4 2.5-36.1 3.8-72.4 7.7-107.6 17-17.5 4.5-34.4 10.8-50.6 18.7-16.4 8.2-31.1 18.5-45.5 29.7-27.3 21.3-57.4 42.6-77.6 71.4-42.5 9.3-85.6 14.5-129.3 14.2-29-.2-57.9-1.4-86.8-4.2-25.6-2.5-50.8-7-76.2-10.6-21.6-3.1-43.3-6.1-64.3-11.9-18.4-5.1-37-12.7-51.1-25.9 3.9-.6 7.8-1.5 11.6-2.6 41.4-12.4 70.9-47.6 106.2-70.4 20.8-13.4 44.1-20 67.7-27.1 27-8.1 54.2-15.5 81.1-24.1 13.1-4.2 26.2-8.7 39-13.7 13.4-5.2 26.5-10.6 40.4-14.1 26-6.5 52.9-7.9 79.6-7.7 13.3.1 26.6.5 40 .8l42.6 1.1zM7.4 7.7c5.6 3.9 10.9 8 16.1 12.3C35.6 30 47 40.9 58.9 51.2c12.1 10.5 25 19.5 38.2 28.6 28.2 19.3 56.5 38.3 85.9 55.7 27.3 16.1 54.8 31.9 81.1 49.7 26.8 18.1 51.7 38.9 74.3 62 23.3 23.9 45.7 48.9 71 70.8 24.5 21.2 53.4 36.8 77.2 58.9 22.4 20.7 34.9 48.7 49.6 74.9 1.6 2.9 3.3 5.8 5.1 8.7-12.9-11.7-26.3-22.8-40.3-33.1-21.5-16-43.9-30.7-66.6-44.9-20.8-13-42.1-25.1-62.8-38.3-37.7-24.2-74.5-52.3-98.2-90.9-1.9-3.1-6.3-1.8-5.2 2 1.5 5.6 2.9 11.2 4 16.8 5.1 24.4 7.8 49.2 13.9 73.3 3 11.9 6.9 23.6 11.8 34.9 5.4 12.2 12.6 23.3 19.8 34.5 15.7 24.6 35.6 46.9 55.3 68.4 9.9 10.8 20.2 21.1 30.4 31.5 10.5 10.6 21 20.7 32.8 29.8 10.4 8.2 21.6 15.2 33.5 21.1 10.9 5.2 22.2 9.8 33.5 14.3 25.2 10.1 50 20.5 73 35 2.8 1.7 5.5 3.5 8.2 5.2-10.9-4.8-22.1-9.2-33.6-11.7-18.4-3.9-37.4-3.1-56-5-19.9-2-38.9-7.6-57.3-15.2-17.9-7.4-35.4-15.6-53.2-22.9-17.4-7.1-34.5-14.9-51.4-23.3-32.7-16.2-64-35.4-93.2-57.2-29.5-22.2-55.6-47.8-80.9-74.6C109.6 358 63.5 300.3 38.3 232.4c-6.9-18.5-12.1-37.8-17.1-56.9C16 155.3 11.8 134.8 11 114c-.8-19.8 1.8-40-.5-59.8C9.6 46 7.9 38 6.8 29.9c-.9-7.2-1.7-15.2.6-22.2z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Hero Image  -->
+              <div class="hero"> 
+                <picture class="hero-image">
+                    <source type="image/jpg" srcset="./assets/img/header_camere1.jpg">
+                    <img src="./assets/img/header_camere1.jpg" alt="Hotel Demo">
+                </picture>
+            </div>
+        </header>
+        <main class="main ">
+            <!-- Main content -->
+            <section class="main-wrapper">
+                <div class="container">
+                    <article class="row">
+                        <header class="main-header">
+                            <h1 class="slide-js" data-delay="0.25" data-scroll="no">LOREM IPSUM DOLOR <br> SIT AMET,
+                                CONSECTE</h1>
+                        </header>
+
+                        <div class="main-content">
+                            <div class="image-large reveal-js">
+                                <picture>
+                                    <!-- <source type="image/webp" srcset="./assets/img/immagine-1-about.webp"> -->
+                                    <source type="image/jpeg" srcset="./assets/img/immagine-1-about.jpg">
+                                    <img width="1200" height="800" src="./assets/img/immagine-1-about.jpg"
+                                        alt="hotel foto 1">
+                                </picture>
+                            </div>
+                            <div class="image-small reveal-js right-side">
+                                <picture>
+                                    <!-- <source type="image/webp" srcset="./assets/img/immagine-2-about.webp"> -->
+                                    <source type="image/jpeg" srcset="./assets/img/immagine-2-about.jpg">
+                                    <img width="808" height="865" src="./assets/img/immagine-2-about.jpg"
+                                        alt="hotel foto 2">
+                                </picture>
+                            </div>
+                            <div class="main-description mx-auto mt-10 fade-js" data-delay="0.25" data-scroll="no">
+                                <div class="description-content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                        sed diam nonummy nibh
+                                        euismod tincidunt ut laoreet dolore magna aliquam erat.
+                                    </p>
+                                    <p>
+                                        Tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                        <br>
+                                        Lorem dolor sit amet elit.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="lines-intro-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" data-name="line-intro" xml:space="preserve"
+                                    x="0" y="0" version="1.1" viewBox="0 0 1920 639">
+                                    <path
+                                        d="M57.3 637c146-132.4 316.4-235 496-315.1 194.2-86.7 399-146.9 605.2-197.1C1264 99.1 1370.1 76.1 1476.2 53c99.8-21.7 200.2-44.6 294.3-85.3 80.8-34.9 156.5-83.9 214.9-150.4 27.8-31.6 51.5-67.1 68.6-105.6 19.4-43.7 29.1-90.3 33.8-137.7 5.2-52.5 4.9-105.2 8.2-157.8 3.1-48.7 10.3-96.8 23.1-144 24.5-90.4 67.2-175.9 125.2-249.5 14.3-18.2 29.6-35.6 45.7-52.3 4-4.2-2.3-10.5-6.4-6.4-63.2 65.6-113.1 143.3-147 227.8-17.2 43-30.3 87.6-38.7 133.2-9 48.7-11.6 98-13.4 147.3-1.9 53.3-3.3 107.1-14.3 159.5-9.5 45.4-27 88.3-52 127.3-47.7 74.4-118.5 132.3-195.9 173.7-91.3 48.9-192.2 76.2-292.6 99-104.9 23.9-210.2 45.5-315 70.1-207.1 48.7-413.1 105.6-609.8 187.7C426.6 364.1 255.7 459 106.4 582.4c-18.9 15.6-37.3 31.6-55.5 48-4.3 4.1 2.1 10.5 6.4 6.6z"
+                                        class="st8" />
+                                    <path
+                                        d="M-261.9 619.2c183.4-135.9 413.6-182 636.4-202.4 240.2-21.9 483.6-19.7 718.3-82.1C1293.2 281.5 1484 189 1645.9 59c82.3-66 155.9-141.8 220-225.6 73.2-95.7 134.9-199.5 201.1-300 128.9-195.9 281-376 453.2-535.1 21.1-19.5 42.6-38.7 64.3-57.6 4.4-3.8-2-10.2-6.4-6.4-174.5 152-330.6 324.7-464 513.8-68.6 97.3-129.2 199.8-196.4 298.1-63.4 92.7-134.3 179.3-217.7 254.9C1543.5 143 1353.3 246 1151.9 308.4c-108 33.4-219.1 54.1-331.4 66.3-126.3 13.7-253.3 18.3-379.9 27.8C221 418.8-6.5 451.6-198.8 566.3c-23.3 13.9-45.9 29-67.7 45.2-4.6 3.4-.1 11.2 4.6 7.7z"
+                                        class="st8" />
+                                    <path
+                                        d="M-375.5 526.5c211.5-154.8 489.3-95.4 730.4-75.1 134 11.3 268.6 15.7 403.1 13 127.4-2.5 256.4-8.5 381.1-36.8 121.4-27.6 234.2-80.8 343.8-138.5 96.7-50.9 193.1-104.4 278.6-172.9C1847 47.6 1917.3-36.3 1961-137.3c45.2-104.6 64.1-218 79.8-330.2 28.2-200.8 51-428.9 200.3-581.7 18.1-18.5 37.8-35.3 59-50.2 4.7-3.3.2-11.1-4.5-7.8-168.8 119.3-220.7 335.6-248.4 528.6-16.4 114.1-28.2 229.5-60 340.7-31.4 109.8-85.2 208.6-166.5 289.4-77.9 77.5-172 136.6-267.6 189.6-107.8 59.7-218.5 118.2-336.2 155.9-124.2 39.8-254.8 51.2-384.5 56.2-134.4 5.2-269.1 3.4-403.3-5.3-132.7-8.7-264.7-29.8-397.8-33.5-115-3.1-233.2 9.7-338 60.2-25.8 12.4-50.3 27.2-73.3 44-4.7 3.5-.2 11.3 4.5 7.9z"
+                                        class="st8" />
+                                </svg>
+                            </div>
+
+                        </div>
+
+                    </article>
+                </div>
+            </section>
+
+            <!-- Parallax Image -->
+            <section class="parallax-wrapper parallax-bg"
+                style="background-image: url('./assets/img/parallax-bg.webp'), url('./assets/img/parallax-bg.jpg');">
+                <div class="parallax-content">
+                    <h2 class="text-subtile fade-js" data-delay="0.25" data-scroll="no">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis"
+                    </h2>
+                </div>
+            </section>
+
+            <!-- Camere -->
+            <section class="camere-wrapper defaultIndex">
+                <div class="lines-rooms-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="line-camere" viewBox="0 0 1920 369">
+                        <path
+                            d="M-218.59-18.48c154.5 81.73 323.16 142.09 498.35 155.9 89.31 7.04 177.94.03 265.65-17.66 92.88-18.73 184.05-44.93 277.1-63 94.88-18.42 190.99-31.78 287.42-38.54 94.23-6.6 187.76-3.03 279.85 19.19 168.97 40.77 322.36 126.54 487.55 178.68 172.46 54.43 357.49 65.7 535.26 32.22 22.18-4.18 44.2-9.09 66.08-14.61 5.61-1.41 3.23-10.1-2.39-8.68-178.5 44.98-367.69 44.37-545.71-2.82-166.84-44.23-319.08-129.28-484.15-178.75C1361.51 18 1274.89 4.97 1186.19 5.96 1093.13 7 999.81 18.18 907.97 32.64c-93.57 14.74-185.33 36.48-277.33 58.7-90.19 21.78-180.87 39.67-274.01 40-178.01.65-352.9-51.32-512.25-128.02-19.67-9.47-39.13-19.36-58.43-29.57-5.12-2.71-9.67 5.06-4.54 7.77Z"
+                            class="cls-2" />
+                        <path
+                            d="M-86.11-76.89C2.2 40.48 112.45 141.44 239.62 215.35 372.01 292.3 520.6 336.29 672.33 353.43c155.79 17.6 313.87 7.88 468.12-18.36 164.7-28.02 324.85-76.66 486.86-116.48 162.21-39.87 328.83-71.69 496.64-61.6 21.07 1.27 42.07 3.23 63.02 5.8 5.74.7 5.68-8.3 0-9-162.74-19.95-326.33 2.54-485.31 38.05-162.57 36.31-321.94 85.78-485.07 119.68-153.93 31.99-311.96 48.39-469.19 39.28-155.09-8.99-309.58-43.95-448.92-113.86C167.01 171 50.96 76.09-43.03-36.79c-12.14-14.58-23.9-29.48-35.31-44.64-3.44-4.57-11.26-.09-7.77 4.54Z"
+                            class="cls-2" />
+                        <path
+                            d="M-403.46 112.68c118.34 96.88 264.55 151.76 414.79 174.26 164.8 24.68 331.86 10.33 494.79-20.67 179.68-34.19 354.73-87.95 532.14-131.72 178.95-44.16 362.55-78.82 547.69-71.39 183.53 7.37 361.51 58.04 535.78 112.52 21.22 6.63 42.41 13.33 63.6 20.04 5.54 1.75 7.9-6.94 2.39-8.68-170.24-53.85-342.09-108.02-520.41-126.9-179.92-19.04-360.28 4.63-536.05 43.37-178.08 39.25-352.42 93.53-530.27 133.74-167.8 37.94-340.26 63.53-512.58 49.57-154.43-12.51-309.15-56.25-437.82-144.63-16.41-11.27-32.28-23.26-47.68-35.87-4.45-3.64-10.85 2.69-6.36 6.36Z"
+                            class="cls-2" />
+                    </svg>
+                </div>
+                <article>
+                    <header class="headerCta row">
+                        <div class="headerCta-title">
+                            <h2 class="slide-js" data-delay="0.25" data-scroll="no">Le Camere</h2>
+                        </div>
+                        <div class="headerCta-btn slide-js" data-delay="0.25" data-scroll="no">
+                            <a href="riepilogo-camere.html" class="cta cta-large">Lorem Ipsum
+                                <span class="headerCta-arrowContainer">
+                                    <svg class="headerCta-arrowSvg" xmlns="http://www.w3.org/2000/svg"
+                                        xml:space="preserve" style="enable-background:new 0 0 68.4 12.5"
+                                        viewBox="0 0 68.4 12.5">
+                                        <path d="m0 6.5 49.8-.3"
+                                            style="fill:none;stroke:#FFFAFA;stroke-width:3;stroke-miterlimit:10" />
+                                        <path d="m45.7 12.3 22.7-6.1L45.6.1z" style="fill:#FFFAFA" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </header>
+                    <div class="camere-inner">
+                        <div class="camere-image reveal-js">
+                            <picture>
+                                <source type="image/webp" srcset="./assets/img/camera.webp">
+                                <source type="image/jpeg" srcset="./assets/img/camera.jpg">
+                                <img width="1350" height="900" src="./assets/img/camera.jpg" alt="camere">
+                            </picture>
+                        </div>
+                        <div class="camere-description fade-js" data-delay="0.75" data-scroll="no">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Mus mauris vitae ultricies leo integer malesuada.
+                                At erat pellentesque adipiscing commodo elit at imperdiet.
+
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <div class="camere-nav fade-js" data-delay="0.5" data-scroll="no">
+                    <nav aria-label="Camere Navigation">
+                        <ul class="camere-tipologie">
+                            <li><a href="#">Suite</a></li>
+                            <li><a href="#">Sharky</a></li>
+                            <li><a href="#">Comunicanti</a></li>
+                            <li><a href="#">Superior</a></li>
+                            <li><a href="#">Standard</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- Buoni motivi Header -->
+            <section class="motivi-wrapper">
+                <div class="leaf-motivi-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" data-name="leaf-motivi" x="0" y="0"
+                        style="enable-background:new 0 0 742 559" version="1.1" viewBox="0 0 742 559">
+                        <path
+                            d="M231.7 162.7c20.4-3.3 40-10.5 59.3-17.8 19.8-7.5 39.4-15.6 58.4-24.9 19.3-9.5 38.2-19.8 57.5-29.4 3.4-1.1 6.7-2.2 10.1-3.3 44.4-15.2 88.4-31.4 135.2-37.4 6.8-.9 13.5-1.5 20.3-2.1-31.6 9-62.6 20.2-93.4 31.7-17.9 6.7-35.7 13.7-53.4 20.9-17.3 7-34.5 14.6-52.1 20.8-14.6 5.2-29.6 9.3-43.9 15.4-15.2 6.5-28.2 15.3-40.2 26.5-26.4 24.5-49.3 52.4-75.5 77-11.2 10.5-21.7 21.6-32.1 33-6.7 7.3-13.5 14.7-20.8 21.4-10.4 6.2-20.5 12.8-30.3 19.9-4.6 3.3-1.5 8.8 3.8 6.6 10.2-4.2 19.3-10.4 27.6-17.5 21.8-13 44.5-24.4 67.8-34.5-.6.7-1.3 1.5-1.9 2.2-27.8 33.7-51.3 70.3-75.7 106.4-15.6 23.2-32.3 46.2-51.1 66.9C84.7 462.7 65 478 50.8 498.4c-.8 1.2-.5 3.9 1.3 4 47.8 1.4 92.1-23.3 136.2-38 23.9-8 48-15.5 71.7-24.2 22.2-8.3 45.2-16.9 65.2-29.8 34.5-22.2 57.1-59 79.2-92.5 13.3-20.2 25.9-40.7 37.2-62.1 11.1-21.2 20.5-43.1 29.3-65.3 2-5 4.1-10.1 6.3-15.1 5.3-5.1 10.3-10.5 15.1-16.1 25.8-29.8 47.2-64.8 78.5-89.3 16-12.6 34.3-20.5 53.5-26.8 10.1-1.4 20.2-3.1 30.2-5.5 1.4-.3 2.7-.8 4.1-1.1-30.2 15.4-60.9 33.1-82.2 59.8-12.1 15.3-21.9 32.2-35.3 46.5-12.7 13.5-23 28.6-31.2 45.2-17.7 35.6-27.7 74.3-33.6 113.4-3 20.3-5.8 40.3-12 59.9-6.1 19.4-14 38.2-21.1 57.2-8.3 22.1-16.2 44.3-25.4 66.1-9.5 22.4-19.7 44.6-30 66.7-.6 1.3.1 5.6 2.4 4.4 17.8-9.7 33.8-22.3 51.4-32.2 17.9-10 36.7-18.1 54.3-28.7 30.2-18.1 57.5-41.5 78.8-69.5 10.8-14.3 19.3-29.5 25.6-46.4 6.3-16.9 10.8-34.4 15.1-51.9 5.9-23.6 12.5-47.1 18.2-70.7 21.1-47 28.9-99.5 26.7-150.8-1-22.4-5.2-51.2 11.6-69.1 7.7-4.1 15.3-8.1 23-12.3 9.7-2.9 19.6-5.2 29.4-7.9 12.6-3.5 24.3-8.4 35.6-14.9.1-.1.3-.2.4-.2h-21.9c-7.3 3-14.7 5.8-22.1 8.4-.2-.2-.5-.3-1-.1l-2.4 1.2c-4.1 1.4-8.1 2.8-12.2 4.1-.8-.2-1.8-.3-2.9.1-11 4-22.1 7.3-33.4 10.4-28.4 6.5-58.5 6.4-87.2 5-25.6-1.3-51.3-4.5-77-5.9-11.6-1.5-23.2-3.1-34.8-4.7-41.2-5.7-83.1-5.3-124.6-4.7-74.8 1-147.7 23.3-212.9 59.5-19.6 10.9-38.8 22.4-59 32.1-20.3 9.8-41.2 18.6-62 27.2-1.6.7-4.9 3.2-3.6 5.4 4.9 8.7 16.1 12.6 25 15.7 13.1 4.6 27.1 7.1 40.8 9.3-.1-.1 77.4 12.2 162.6-1.5zm218.1 68.9c-10.4 22.1-22.4 43.4-35.3 64-11.5 18.2-23.3 36.4-36.1 53.7-12.1 16.4-25.5 31-41.7 43.5-18.1 14-38.5 23.6-59.4 32.6-23.1 10-46.6 18.8-70.3 27.3-13.1 4.7-26.3 8.8-39.3 13.7-12.3 4.6-24.4 9.5-36.7 14.1-24 8.9-49 16.9-74.8 17.1 12.5-16.6 28.6-30.1 43-45.1 16.4-17.2 30.9-36.5 44.7-55.9 25.5-35.6 49.6-72.3 76.6-106.8 7-8.9 14.2-17.6 21.6-26.1 5.2-2.2 10.5-4.3 15.7-6.3 42.8-16.6 89.2-20.7 132.5-35.9 19.6-6.9 39-14.5 57.1-24.7 8.5-4.7 16.5-9.9 23.9-16.2-7.1 16.9-13.5 34.3-21.5 51zM73.7 159.5c-15.4-3.2-30.6-7.6-45.1-13.1-2.7-1-5.3-2.2-7.8-3.5-2.7-1.4-5.4-3-7.7-5.1 34.8-15.3 69.1-31.7 101.5-51.7 32.3-20 66.5-36.7 102.7-48.2 35.8-11.4 72.8-17.5 110.3-18.8 20.6-.7 41.2-.4 61.8-.3 21.2.1 42.4.8 63.4 3 5.1.5 10.1 1.2 15.2 1.8-19.2.5-38.3 3.2-57.5 5.1-18.8 1.9-37.6 1.8-56.4 3.3-17.4 1.3-34.8 3.9-51.6 8.8-17.5 5.1-33.5 13-49.4 22-36.7 20.9-72.3 44.2-111.5 60.6-2.6 1.1-4.5 6.2-.3 6.2 81 .5 162-8.8 239.9-31.2-4 2.1-8.1 4.2-12.1 6.3-19.1 9.9-38.4 19.1-58.3 27.3-18.9 7.8-38.1 15-57.8 20.5-18.5 5.1-37.3 8.5-56.3 10.6-4.3.5-8.6.6-12.9.5l-91.7-2.1c-6.2-.1-12.3-.8-18.4-2zm542.1 152.8c-8.8 34.4-15.7 70.7-35.9 100.6-9.7 14.4-21 27.6-33.8 39.3-12.5 11.4-26.6 21-40.7 30.3-19.1 12.7-39.8 22.3-60.1 32.7-17.6 9.1-33.3 21.1-50.3 31.2 16.5-36.1 32.2-72.6 45.6-110 13.4-37.4 30.7-74 36.7-113.7 5.9-38.8 14.4-76.7 30.1-112.9 7.5-17.3 16-34.1 27.8-48.9 6-7.5 12.9-14.1 18.8-21.6 6-7.5 11.3-15.6 16.7-23.5 6.2-9.1 12.7-18 20.4-25.8 6.9-7.1 14.5-13.4 22.4-19.4-4.8 5.3-9.3 11.1-13.2 17.5-7.3 11.9-12.1 25-15.9 38.5-4.6 16.2-8.2 32.7-11.4 49.3-6.4 33.8-11 68-18.2 101.7-4.1 19-9.1 37.5-11.4 56.9-2.3 19.1-3.6 38.2-8.2 56.9-1.2 4.7 4.3 4.6 5.8 1 10.5-24.5 28.3-44.4 45.3-64.5 15.5-18.3 29.8-37.4 40.9-58.6-3.5 14.3-7.7 28.6-11.4 43z" />
+                    </svg>
+                </div>
+                <header class="headerCta headerCta-mob row">
+                    <div class="headerCta-title title-pr">
+                        <h2 class="slide-js" data-delay="0.5" data-scroll="no">Buoni Motivi</h2>
+                    </div>
+                    <div class="headerCta-btn slide-js" data-delay="0.75" data-scroll="no">
+                        <a href="#" class="cta cta-large">Lorem Ipsum
+                            <span class="headerCta-arrowContainer">
+                                <svg class="headerCta-arrowSvg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+                                    style="enable-background:new 0 0 68.4 12.5" viewBox="0 0 68.4 12.5">
+                                    <path d="m0 6.5 49.8-.3"
+                                        style="fill:none;stroke:#FFFAFA;stroke-width:3;stroke-miterlimit:10" />
+                                    <path d="m45.7 12.3 22.7-6.1L45.6.1z" style="fill:#FFFAFA" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </header>
+            </section>
+
+            <!-- Buoni motivi Slide -->
+            <section class="motivi-slideshow" id="verticalSliderSection">
+                <div class="slider swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <div class="motivi-inner">
+                            <picture>
+                                <source type="image/jpeg" srcset="./assets/img/Buoni-motivi-colazione.jpg">
+                                <img width="1903" height="845" src="./assets/img/Buoni-motivi-colazione.jpg"
+                                    alt="hotel foto 1">
+                            </picture>
+                            <div class="motivi-content">
+                                <a href="#">
+                                    <h2>Colazione</h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="motivi-inner">
+
+                            <picture>
+                                <source type="image/jpeg" srcset="./assets/img/buoni-motivi-spiaggia.jpg">
+                                <img width="1903" height="845" src="./assets/img/buoni-motivi-spiaggia.jpg"
+                                    alt="hotel foto 2">
+                            </picture>
+                            <div class="motivi-content">
+                                <a href="#">
+                                    <h2>Spiaggia</h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="motivi-inner">
+                            <picture>
+                                <source type="image/jpeg" srcset="./assets/img/buonit-motivi-cattolica.jpg">
+                                <img width="1903" height="845" src="./assets/img/buonit-motivi-cattolica.jpg"
+                                    alt="hotel foto 3">
+                            </picture>
+                            <div class="motivi-content">
+                                <a href="#">
+                                    <h2>Territorio</h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="arrow-motivi-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Livello_1" x="0" y="0"
+                        version="1.1" viewBox="0 0 16 99">
+                        <path d="m8.1 1.1.3 78.8" />
+                        <path d="m2.2 75.8 6.2 22.8 6-22.8z" />
+                    </svg>
+                </div>
+            </section>
+            <!-- Offerte Slides -->
+            <section class="offerte-wrapper" id="offers">
+                <div class="lines-offer-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="line-offer" xml:space="preserve" x="0" y="0"
+                        version="1.1" viewBox="0 0 1920 639">
+                        <path
+                            d="M57.3 637c146-132.4 316.4-235 496-315.1 194.2-86.7 399-146.9 605.2-197.1C1264 99.1 1370.1 76.1 1476.2 53c99.8-21.7 200.2-44.6 294.3-85.3 80.8-34.9 156.5-83.9 214.9-150.4 27.8-31.6 51.5-67.1 68.6-105.6 19.4-43.7 29.1-90.3 33.8-137.7 5.2-52.5 4.9-105.2 8.2-157.8 3.1-48.7 10.3-96.8 23.1-144 24.5-90.4 67.2-175.9 125.2-249.5 14.3-18.2 29.6-35.6 45.7-52.3 4-4.2-2.3-10.5-6.4-6.4-63.2 65.6-113.1 143.3-147 227.8-17.2 43-30.3 87.6-38.7 133.2-9 48.7-11.6 98-13.4 147.3-1.9 53.3-3.3 107.1-14.3 159.5-9.5 45.4-27 88.3-52 127.3-47.7 74.4-118.5 132.3-195.9 173.7-91.3 48.9-192.2 76.2-292.6 99-104.9 23.9-210.2 45.5-315 70.1-207.1 48.7-413.1 105.6-609.8 187.7C426.6 364.1 255.7 459 106.4 582.4c-18.9 15.6-37.3 31.6-55.5 48-4.3 4.1 2.1 10.5 6.4 6.6z"
+                            class="st8" />
+                        <path
+                            d="M-261.9 619.2c183.4-135.9 413.6-182 636.4-202.4 240.2-21.9 483.6-19.7 718.3-82.1C1293.2 281.5 1484 189 1645.9 59c82.3-66 155.9-141.8 220-225.6 73.2-95.7 134.9-199.5 201.1-300 128.9-195.9 281-376 453.2-535.1 21.1-19.5 42.6-38.7 64.3-57.6 4.4-3.8-2-10.2-6.4-6.4-174.5 152-330.6 324.7-464 513.8-68.6 97.3-129.2 199.8-196.4 298.1-63.4 92.7-134.3 179.3-217.7 254.9C1543.5 143 1353.3 246 1151.9 308.4c-108 33.4-219.1 54.1-331.4 66.3-126.3 13.7-253.3 18.3-379.9 27.8C221 418.8-6.5 451.6-198.8 566.3c-23.3 13.9-45.9 29-67.7 45.2-4.6 3.4-.1 11.2 4.6 7.7z"
+                            class="st8" />
+                        <path
+                            d="M-375.5 526.5c211.5-154.8 489.3-95.4 730.4-75.1 134 11.3 268.6 15.7 403.1 13 127.4-2.5 256.4-8.5 381.1-36.8 121.4-27.6 234.2-80.8 343.8-138.5 96.7-50.9 193.1-104.4 278.6-172.9C1847 47.6 1917.3-36.3 1961-137.3c45.2-104.6 64.1-218 79.8-330.2 28.2-200.8 51-428.9 200.3-581.7 18.1-18.5 37.8-35.3 59-50.2 4.7-3.3.2-11.1-4.5-7.8-168.8 119.3-220.7 335.6-248.4 528.6-16.4 114.1-28.2 229.5-60 340.7-31.4 109.8-85.2 208.6-166.5 289.4-77.9 77.5-172 136.6-267.6 189.6-107.8 59.7-218.5 118.2-336.2 155.9-124.2 39.8-254.8 51.2-384.5 56.2-134.4 5.2-269.1 3.4-403.3-5.3-132.7-8.7-264.7-29.8-397.8-33.5-115-3.1-233.2 9.7-338 60.2-25.8 12.4-50.3 27.2-73.3 44-4.7 3.5-.2 11.3 4.5 7.9z"
+                            class="st8" />
+                    </svg>
+                </div>
+                <header class="headerCta headerCta-mob row">
+                    <div class="headerCta-title title-pr">
+                        <h2 class="slide-js" data-delay="0.5" data-scroll="no">Le offerte</h2>
+                        <p class="fade-js" data-delay="0.75" data-scroll="no">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing
+                            elit,sed diam nonummy nibh.</p>
+                    </div>
+                    <div class="headerCta-btn slide-js" data-delay="0.75" data-scroll="no">
+                        <a href="riepilogo-offerte.html" class="cta cta-large">Tutte le offerte
+                            <span class="headerCta-arrowContainer">
+                                <svg class="headerCta-arrowSvg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+                                    style="enable-background:new 0 0 68.4 12.5" viewBox="0 0 68.4 12.5">
+                                    <path d="m0 6.5 49.8-.3"
+                                        style="fill:none;stroke:#FFFAFA;stroke-width:3;stroke-miterlimit:10" />
+                                    <path d="m45.7 12.3 22.7-6.1L45.6.1z" style="fill:#FFFAFA" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </header>
+
+                <div class="offerte-slideshow">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide reveal-offerte">
+                                <div class="offerte-bg"
+                                    style="background-image: url('./assets/img/offerta-1.webp'), url('./assets/img/offerta-1.jpg');">
+                                </div>
+                                <div class="offerte-content">
+                                    <h2>Periodo dell'offerta</h2>
+                                    <p>LOREM IPSUM OFFERTA 1</p>
+                                    <div class="price-box">
+                                        <span>DA XX,XX € a persona </span>
+                                    </div>
+                                    <div class="offerte-btn">
+                                        <a href="#" class="cta cta-outline">SCOPRI</a>
+                                        <a href="#" class="cta">RICHIEDI</a>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide reveal-offerte">
+                                <div class="offerte-bg"
+                                    style="background-image: url('./assets/img/offerta-2.webp'), url('./assets/img/offerta-2.jpg');">
+                                </div>
+                                <div class="offerte-content">
+                                    <h2>Periodo dell'offerta</h2>
+                                    <p>LOREM IPSUM OFFERTA 2</p>
+                                    <div class="price-box">
+                                        <span>DA XX,XX € a persona </span>
+                                    </div>
+                                    <div class="offerte-btn">
+                                        <a href="#" class="cta cta-outline">SCOPRI</a>
+                                        <a href="#" class="cta">RICHIEDI</a>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="offer-navigation">
+                <div class="arrow-offerSlide-svg offer-left-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 95.4 12.3" viewBox="0 0 95.4 12.3">
+                        <path d="m0 6.4 76.8-.3" style="fill:none;stroke:#CB9766;stroke-width:3;stroke-miterlimit:10"/>
+                        <path d="m72.6 12.3 22.8-6.2L72.6 0z" style="fill:#CB9766"/>
+                    </svg>
+                </div>
+                <div class="arrow-offerSlide-svg offer-right-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 95.4 12.3" viewBox="0 0 95.4 12.3">
+                        <path d="m0 6.4 76.8-.3" style="fill:none;stroke:#CB9766;stroke-width:3;stroke-miterlimit:10"/>
+                        <path d="m72.6 12.3 22.8-6.2L72.6 0z" style="fill:#CB9766"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Dicono di noi -->
+            <section class="reviews-wrapper">
+                <header class="headerCta headerCta-mob row">
+                    <div class="headerCta-title ">
+                        <h2 class="slide-js" data-delay="0.5" data-scroll="no">Dicono di noi lorem</h2>
+                    </div>
+                </header>
+                <div class="reviews-container reviews-slideshow">
+                    <div class="leaf-review-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" data-name="leaf-review" viewBox="0 0 760 822.94">
+                            <path
+                                d="M245.47 550.12c3.2-1.38 6.4-2.79 9.61-4.15 8.27-3.51 16.47-6.68 25.31-8.44 8.36-1.67 16.85-2.35 25.34-2.92 17.21-1.14 33.79-2.86 50.28-8.21 17.1-5.55 33.44-13.18 49.85-20.43 14.99-6.62 30.25-12.58 45.15-19.41 29.75-13.64 58.5-29.52 85.44-48.13 26.91-18.59 51.35-39.96 74.28-63.24 44.79-45.47 87.45-94.84 113.39-153.81 6.54-14.86 11.59-30.15 16.11-45.72 5.13-17.68 10.08-35.48 12.94-53.7 2.88-18.37 2.59-36.62 2.32-55.15-.12-8.32-.27-16.68.95-24.93 1.06-7.16 2.52-14.25 3.2-21.46.6-6.4.67-13.16-1.89-19.18-.52-1.22-1.74-1.65-2.92-.87-22.55 14.9-40.7 35.28-62.28 51.44-11.89 8.9-24.52 16.94-36.81 25.27-12.48 8.45-25.06 16.75-37.87 24.7-47.46 29.46-97.31 55.42-138.69 93.55-21.38 19.7-40.42 41.83-61.25 62.1-10.45 10.17-21.27 19.86-33.02 28.52-11.21 8.26-22.84 15.94-33.98 24.28-10.92 8.17-21.33 16.98-29.97 27.58-8.03 9.85-14.54 20.82-20.64 31.93-6.29 11.45-12.18 23.13-19.07 34.23-2.14 3.44-4.35 6.84-6.61 10.21-.42.43-.86.83-1.28 1.26-14.19 14.57-27.06 30.28-39.49 46.34-13.1 16.87-25.42 34.4-39.55 50.43-14.65 16.58-30.77 31.84-48.33 45.34-17.21 13.21-35.84 24.18-56.33 31.41-2.04.72-4.12 1.41-6.16 2.1-1.9.47-3.79.95-5.69 1.43 7.68-4.58 14.79-10.21 21.33-16.12 1.7-1.54 3.37-3.1 5.01-4.7 20.64-16.58 39.62-35.69 55.52-56.45 24.3-31.75 38.77-69.37 48.76-107.72 5-19.18 10.25-39.24 11.39-59.24 5.92-16.1 13.6-31.56 21.38-46.82 20.87-40.97 40.44-83.22 48.02-128.97 3.69-22.26 4.62-45.2.35-67.43-2.21-11.52-6.45-22.25-9.81-33.43-3.53-11.72-4.63-23.88-6.58-35.91-.97-5.98-2.22-11.89-4-17.69-.16-.51-.65-.94-1.21-.72-14.55 5.8-23.4 22.68-30.61 35.56-9.92 17.72-20.43 35.11-29.7 53.19-5.54 10.81-10.91 21.71-16.67 32.4-6.05 11.23-12.64 22.17-19.12 33.16-13 22.03-26.12 44-38.81 66.22-11.95 20.93-24.54 41.97-33.37 64.45-8.41 21.42-13.61 43.99-16.69 66.76-3.22 23.81-5.04 48.03-3.9 72.04.6 12.76 1.43 25.5 2.14 38.25.66 11.75 1.43 23.81.07 35.54-4.09 35.24-26.65 68.98-55.53 89.73-6.17 2.75-16.12 7.54-25.8 12.09v13.21c8.75-3.48 17.5-7.17 26.14-11.11 5.58-1.01 11.28-1.64 16.49-3.91.52-.2 1.01-.46 1.5-.69 15.08-.26 30.31 1.96 44.59 5.84 26.02 7.11 50.84 19.2 72.54 35.18 11.4 8.38 21.79 18.08 32.44 27.35 11.69 10.13 23.4 20.27 35.32 30.14 23.98 19.92 48.76 38.92 75.36 55.21 15.23 9.33 31.06 17.62 46.92 25.88 16.95 8.84 33.68 18.42 49.86 28.61 3.48 2.19 9.1-2.71 7.05-6.51-7.34-13.82-7.8-29.71-9.41-44.96-1.58-15.31-4.82-29.56-12.78-42.73 5.58 1.15 11.16 2.23 16.73 3.24 25.34 4.6 51.02 7.35 76.78 7.7 25.91.35 51.92-.51 77.75-2.57 23.84-1.9 47.32-5.54 70.93-9.2 18.63-2.89 37.35-5.38 55.71-9.76 17.69-4.23 35.83-10.12 50.74-20.83 3.44-2.47 6.66-5.2 9.63-8.23.95-.96 2-3.43-.16-3.78-18.6-2.99-35.75-13.14-50.91-23.83-15.71-11.09-30.21-23.79-45.97-34.8-7.67-5.36-15.66-10.33-24.16-14.28-9.78-4.55-20.29-7.53-30.57-10.72-23.91-7.42-48.09-13.94-72.03-21.3-12.27-3.77-24.47-7.74-36.52-12.16-11.51-4.22-22.68-9.34-34.37-13.07-22.46-7.17-45.95-9.56-69.43-9.94l-134.7 5.45ZM78.56 537.5c6.9-20.06 6.67-41.14 6.03-62.11-.77-25.15-2.62-50.28-1.4-75.46 1.13-23.23 4.33-46.64 10.18-69.16 3.02-11.63 6.88-23.05 11.6-34.11 4.89-11.42 10.91-22.32 16.87-33.2 12.26-22.38 25.15-44.4 38.11-66.38 12.85-21.79 26.18-43.37 37.81-65.86 5.67-10.97 11.09-22.06 16.87-32.97 5.01-9.47 10.67-18.53 15.92-27.86 8.38-14.9 15.6-31.79 28.14-43.78 2.53-2.42 5.35-4.49 8.53-5.94 3.36 10.93 4.71 22.25 6.58 33.5.97 5.84 2.06 11.66 3.66 17.36 1.6 5.67 3.76 11.15 5.4 16.8 6.49 22.33 7.31 45.74 4.75 68.78-5.02 45.27-22.58 88.75-43.11 129.03-8.49 16.67-17.29 33.27-24.48 50.55-.26-13.29-.81-25.94 2.05-39.13 2.94-13.41 7.4-26.45 10.79-39.75.81-3.11-2.53-8.32-5.44-4.49-11.34 14.94-17.62 32.38-26.31 48.85-9.96 18.85-23.83 35.32-35 53.43-11.14 18.11-21.07 36.62-32.87 54.35-10.77 16.21-21.5 32.93-27.32 51.64-5.99 19.2-6.45 39.32-11.14 58.75-5.04 21.04-17.16 39.18-32.3 54.32-4.37 4.37-8.96 8.56-13.63 12.69 13.18-14.55 23.49-31.8 29.7-49.86Zm253.18 12.57c11.63-.3 23.27-.64 34.9-.72 23.36-.16 46.8 1.04 69.55 6.73 12.2 3.05 23.62 7.82 35.3 12.35 11.23 4.35 22.64 8.26 34.11 11.93 23.45 7.5 47.21 13.99 70.8 21.05 20.54 6.14 40.94 11.91 59.09 23.64 30.88 19.96 56.63 50.7 92.79 61.52 3.32.99 6.69 1.67 10.09 2.24-12.31 11.51-28.63 18.17-44.66 22.6-18.38 5.09-37.31 7.72-56.15 10.4-22.2 3.15-44.23 7.06-66.56 9.24-25.19 2.46-50.5 3.51-75.8 3.7-38.21.28-75.88-4.2-112.97-12.35-17.64-25.13-43.95-43.73-67.81-62.37-12.58-9.79-25.39-18.77-39.72-25.85-14.13-6.99-29.02-12.29-44.21-16.35-30.74-8.2-62.41-11.57-93.96-14.88-6.8-.7-13.61-1.44-20.43-2.14 2.9-.49 5.75-1.11 8.51-1.77 13.01-3.09 25.55-7.93 37.89-13.02 14.67-6.04 29.21-12.38 43.73-18.76 5.08-1.33 10.18-2.58 15.3-3.79 23.97-5.69 48.25-10.44 72.83-12.4l37.39-1ZM754.46 25.7c-.94 7.07-2.45 14.06-3.26 21.16-1.97 17.25.26 34.89-.41 52.21-.71 18.22-4.31 36.15-8.88 53.76-4.33 16.68-8.93 33.49-14.93 49.66-22.02 59.33-62.22 109.77-105.24 155.3-22.08 23.38-44.92 45.74-70.65 65.12-25.47 19.18-52.92 35.67-81.42 49.93-14.7 7.35-29.7 14.1-44.91 20.33-15.62 6.4-30.89 13.6-46.5 20.03-16.1 6.62-32.71 11.57-50.08 13.3-16.29 1.62-32.84.95-48.93 4.36-10.06 2.13-19.79 5.95-29.33 10.18 2.39-1.54 4.78-3.08 7.18-4.59 20.09-12.64 41.83-21.73 63.79-30.54 9.84-3.94 19.66-7.94 29.22-12.52 10.28-4.92 20.21-11.51 29.25-18.45 10.28-7.92 19.49-16.78 28.61-26.02 8.95-9.07 17.96-18.08 26.57-27.49 17.16-18.71 34.6-38.26 48.27-59.7 6.22-9.79 12.58-19.49 17.27-30.11 4.35-9.84 7.69-20.06 10.33-30.48 5.38-21.04 7.71-42.78 12.18-64.05 1.04-4.92 2.22-9.82 3.54-14.68.92-3.25-2.91-4.4-4.55-1.73-20.75 33.71-52.88 58.29-85.78 79.42-18.02 11.54-36.64 22.14-54.81 33.48-19.83 12.38-39.38 25.25-58.15 39.21-12.22 9.09-24 18.69-35.19 28.94 1.5-2.51 3-5.04 4.43-7.59 12.8-22.87 23.72-47.32 43.3-65.41 20.83-19.25 46.08-32.86 67.48-51.41 22.08-19.14 41.63-41 62.02-61.86 19.83-20.28 41.43-38.25 64.93-54.14 22.94-15.51 46.96-29.34 70.81-43.39 25.74-15.16 50.44-31.75 75.06-48.64 11.51-7.89 22.78-15.81 33.35-24.95 10.38-8.98 20.32-18.47 30.87-27.26 4.53-3.78 9.22-7.35 14.07-10.7 2 6.13 1.34 13.09.51 19.34Z" />
+                        </svg>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <p>
+                                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                    mus. Donec quam felis,
+                                    ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                                    Donec pede justo,
+                                    fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+                                    rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+                                </p>
+                                <span class="author">Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra
+                                auctor, sem massa mattis sem,
+                                at interdum magna augue eget diam.Quisque cursus, metus vitae pharetra auctor, sem massa
+                                mattis sem,
+                                at interdum magna augue eget diam. nulla ut metus varius laoreet.
+                                </p>
+                                <span class="author">John Doe</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <p>
+                                    Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+                                    ante, dapibus in, viverra quis,
+                                    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. nulla ut metus
+                                    varius laoreet.Quisque rutrum. Aenean imperdiet.
+                                    Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+                                </p>
+                                <span class="author">Jane Smith</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <p>
+                                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                    mus. Donec quam felis,
+                                    ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                                    Donec pede justo,
+                                    fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+                                    rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+                                </p>
+                                <span class="author">Lorem Ipsum</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra
+                                auctor, sem massa mattis sem,
+                                at interdum magna augue eget diam.Quisque cursus, metus vitae pharetra auctor, sem massa
+                                mattis sem,
+                                at interdum magna augue eget diam. nulla ut metus varius laoreet.
+                                </p>
+                                <span class="author">John Doe</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <p>
+                                    Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+                                    ante, dapibus in, viverra quis,
+                                    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. nulla ut metus
+                                    varius laoreet.Quisque rutrum. Aenean imperdiet.
+                                    Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+                                </p>
+                                <span class="author">Jane Smith</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <aside class="col-5 flex-center">
+                        <div class="footer-logo">
+                            <a href="#">
+                                <picture>
+                                    <source type="image/png" srcset="./assets/img/logo-demoHotel-white.png">
+                                    <img src="./assets/img/logo-demoHotel-white.png" alt="logo demoHotel footer">
+                                </picture>
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <div class="footer-heading">Come raggiungerci</div>
+                            <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="streetAddress">Via Tiliox, 5,</span><br>
+                                <span itemprop="postalCode">41241</span> <span itemprop="addressLocality">Desierto
+                                    RT</span><br>
+                                <span itemprop="addressRegion" content="Emilia-Romagna"></span>
+                                <span itemprop="addressCountry" content="Italia"></span>
+                            </address>
+                            <div class="footer-heading">Contatti</div>
+                            <div class="footer-contacts" itemscope itemtype="https://schema.org/ContactPoint">
+                                <a href="mailto:booking@demoHotel.it" itemprop="email">booking@demoHotel.it</a>
+                                <a href="tel:+395" itemprop="telephone">+39 000 2222</a>
+                                <a href="tel:+393" itemprop="telephone">+39 000 22</a>
+                            </div>
+
+                            <ul class="footer-links">
+                                <li>P.Iva 111111111</li>
+                                <li class="footer-privacy">
+                                    <a href="#">Privacy Policy </a>
+                                    <span>|</span>
+                                    <a href="#">Cookie Policy</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </aside>
+                    <div class="col-7">
+                        <div class="footer-slideshow">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="footerSlide-inner">
+                                        <picture>
+                                            <source type="image/jpg" srcset="./assets/img/immagine-footer.jpg">
+                                            <img width="1058" height="730" src="./assets/img/immagine-footer.jpg"
+                                                alt="Hotel Demo">
+                                        </picture>
+                                        <span class="footerSlide-title">Spiaggia</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="footerSlide-inner">
+                                        <picture>
+                                            <source type="image/jpg" srcset="https://placedog.net/1058/730?random">
+                                            <img width="1058" height="730" src="https://placedog.net/1058/730?random"
+                                                alt="Hotel Demo">
+                                        </picture>
+                                        <span class="footerSlide-title">Camere</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="footerSlide-inner">
+                                        <picture>
+                                            <source type="image/jpg" srcset="https://placedog.net/1058/730?random">
+                                            <img width="1058" height="730" src="https://placedog.net/1058/730?random"
+                                                alt="Hotel Demo">
+                                        </picture>
+                                        <span class="footerSlide-title">Territorio</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-navigation">
+                                <div class="arrow-footerSlide-svg">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 95.4 12.3" viewBox="0 0 95.4 12.3">
+                                        <path d="m0 6.4 76.8-.3" style="fill:none;stroke:snow;stroke-width:3;stroke-miterlimit:10"/>
+                                        <path d="m72.6 12.3 22.8-6.2L72.6 0z" style="fill:snow"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+    <script src="assets/js/magic-mouse.min.js" defer></script>
+    <script src="assets/js/main.js?v=0.0.2" defer></script>
+</body>
+
+</html>
