@@ -38,7 +38,10 @@
       window.addEventListener("wheel", preventDefault, { passive: false });
       window.addEventListener("mousewheel", preventDefault, false);
       // Re-ubica el scroll en la slider para que el usuario no se salte esta seccion
-      window.scrollTo(document.documentElement.scrollLeft, scrollTop);
+      window.scroll = debounce(
+        window.scrollTo(document.documentElement.scrollLeft, scrollTop),
+        25
+      );
     }
 
     function enableScroll() {
@@ -115,12 +118,13 @@
                 entry.target.getBoundingClientRect().top + window.scrollY;
               const offset = window.innerHeight - entry.target.clientHeight;
               const scrollToPosition = sectionTop - offset;
+
               gsap.to(window, {
                 scrollTo: {
                   y: scrollToPosition,
                   autoKill: false,
                 },
-                duration: 0.85,
+                duration: 1,
                 ease: "power2.out",
               });
 
@@ -137,20 +141,22 @@
                 // Escuchador del scroll para cambiar de slide
                 window.addEventListener("wheel", function (event) {
                   if (event.deltaY < 0) {
+                    console.log("up");
                     motiviSlider.slidePrev();
                   } else {
+                    console.log("down");
                     motiviSlider.slideNext();
                   }
                 });
-              }, 1000);
+              }, 800);
             } else {
-              motiviSlider.disable();
+              window.addEventListener("wheel", function (event) {});
             }
           });
         },
         {
           root: null,
-          threshold: 0.85,
+          threshold: 1,
         }
       );
 
@@ -165,5 +171,14 @@
         }
       });
     }
+
+    // Destruyendo slider cuando ya no es desktop
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 1023 && motiviSlider) {
+        destroySwiper();
+      } else {
+        initSwiper();
+      }
+    });
   });
 })();
