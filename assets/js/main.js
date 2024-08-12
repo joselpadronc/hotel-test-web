@@ -16,6 +16,7 @@
 
   // sliders
   window.addEventListener("load", () => {
+    let motiviSlider; // Variable para manejar slider con swiper.js
     const interleaveOffset = 0.75;
     const windowWidth = window.innerWidth;
 
@@ -47,10 +48,8 @@
       window.onscroll = function () {};
     }
 
-    // Motivi Slider
-    const motiviSlideElement = document.querySelector(".motivi-slideshow");
-    if (windowWidth > 1023) {
-      const motiviSlider = new Swiper(motiviSlideElement, {
+    function initSwiper() {
+      motiviSlider = new Swiper(motiviSlideElement, {
         direction: "vertical",
         speed: 1000, // velocidad de transición
         loop: false,
@@ -87,6 +86,19 @@
           // END efecto de transición para los slides
         },
       });
+    }
+
+    function destroySwiper() {
+      if (motiviSlider) {
+        motiviSlider.destroy(true, true);
+        motiviSlider = undefined;
+      }
+    }
+
+    // Motivi Slider
+    const motiviSlideElement = document.querySelector(".motivi-slideshow");
+    if (windowWidth > 1023) {
+      initSwiper();
 
       // Motivi slider arrow navigation
       const arrowMotiviSvg = document.querySelector(".arrow-motivi-svg");
@@ -94,10 +106,7 @@
         "#verticalSliderSection"
       );
 
-      arrowMotiviSvg.addEventListener("click", () => {
-        motiviSlider.slideNext();
-      });
-
+      // Observador que verifica cuando se intersepta la seccion del swiper para pausar scroll y activar slider
       const sliderObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -111,13 +120,21 @@
                   y: scrollToPosition,
                   autoKill: false,
                 },
-                duration: 1,
+                duration: 0.85,
                 ease: "power2.out",
               });
+
               disableScroll(scrollToPosition);
 
               setTimeout(() => {
                 motiviSlider.enable();
+
+                // Escuchador del click en la flecha para cambiar de slide
+                arrowMotiviSvg.addEventListener("click", () => {
+                  motiviSlider.slideNext();
+                });
+
+                // Escuchador del scroll para cambiar de slide
                 window.addEventListener("wheel", function (event) {
                   if (event.deltaY < 0) {
                     motiviSlider.slidePrev();
@@ -125,25 +142,22 @@
                     motiviSlider.slideNext();
                   }
                 });
-              }, 800);
+              }, 1000);
             } else {
               motiviSlider.disable();
-              window.addEventListener("wheel", function () {});
             }
           });
         },
         {
           root: null,
-          threshold: 1,
+          threshold: 0.85,
         }
       );
+
       sliderObserver.observe(verticalSliderSection);
 
       motiviSlider.on("slideChange", function () {
-        if (
-          motiviSlider.activeIndex === motiviSlider.slides.length - 1 ||
-          motiviSlider.activeIndex === 0
-        ) {
+        if (motiviSlider.activeIndex === 0 || motiviSlider.activeIndex === 2) {
           setTimeout(() => {
             motiviSlider.disable();
             enableScroll();
@@ -151,15 +165,5 @@
         }
       });
     }
-
-    // Initialize Motivi slider
-    // if (motiviSlideElement) {
-    //   // Si es mobile desactivo el slider
-    //   window.addEventListener("resize", () => {
-    //     if (window.innerWidth <= 1023 && motiviSlider) {
-    //       motiviSlider.destroy(true, true); // destroy slider
-    //     }
-    //   });
-    // }
   });
 })();
